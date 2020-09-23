@@ -14,11 +14,11 @@ plant = 1/(m*s^2 + b*s + k);
 % step(plant);
 
 % open-loop step response at user defined time stamps
-t = 0:0.01:1.5;
+t = 0:0.01:2;
 x = step(plant,t);
 
-% figure(2);
-% plot(t,x);
+figure(2);
+plot(t,x);
 
 % closed-loop system transfer function step-responses
 
