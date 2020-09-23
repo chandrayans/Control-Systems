@@ -1,0 +1,14 @@
+General Tips for Designing a PID Controller
+-------------------------------------------
+
+When you are designing a PID controller for a given system, follow the steps shown below to obtain a desired response.
+
+   1. Obtain an open-loop response and determine what needs to be improved
+   2. Add a proportional control to improve the rise time
+   3. Add a derivative control to reduce the overshoot
+   4. Add an integral control to reduce the steady-state error
+   5. Adjust each of the gains $K_p$, $K_i$, and $K_d$ until you obtain a desired overall response. You can always refer to the table shown in this "PID Tutorial" page to find out which controller controls which characteristics.
+
+Lastly, please keep in mind that you do not need to implement all three controllers (proportional, derivative, and integral) into a single system, if not necessary. For example, if a PI controller meets the given requirements (like the above example), then you don't need to implement a derivative controller on the system. Keep the controller as simple as possible.
+
+An example of tuning a PI controller on an actual physical system can be found at the following link. This example also begins to illustrate some challenges of implementing control, including: control saturation, integrator wind-up, and noise amplification. 
